@@ -11,7 +11,7 @@
             background-color: rgba(128, 0, 128, 0.2);
         }
         .img-fluid {
-            width: 60%;
+            width: 50%;
         }
         .img-fluid:hover {
             animation: jiggle 1.5s ease-in-out infinite;
@@ -34,6 +34,19 @@
             font-family: 'Brush Script MT', cursive;
             font-size: 48px;
         }
+
+    a:link, a:visited {
+    background-color: purple;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    }
+
+    a:hover, a:active {
+    background-color: red;
+    }
     </style>
     
 </head>
@@ -46,50 +59,25 @@
         <h1>Lebron James, the GOAT</h1>
         <div>
             <a href="https://www.basketball-reference.com/players/j/jamesle01.html">LeBron James' Career Stats</a>
-        </div>
+        </div><br>
     </div>
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6 offset-md-3" style="text-align: center; position: relative;"><br>
+            <div class="col-md-6 offset-md-3" style="text-align: center; position: relative;">
                 <img src="images/lebron-goat.jpg" class="img-fluid rounded mx-auto d-block fade-in" alt="LeBron James">
             </div>
-            <div class="col-md-6 offset-md-3" style="text-align: center; position: relative;"><br>
-                <iframe id="player" type="text/html" width="640" height="360"
-                src="https://www.youtube.com/embed/VIDEO_ID?enablejsapi=1"
-                frameborder="0"></iframe>
-            </div>
-            <div class="col-md-4 left-box">
+            <div class="col-md-6 left-box ">
                 <p class="">Oh my goodness, I absolutely ADORE LeBron James! I mean, what's not to love about the King himself, the basketball maestro, the one and only LeBron James?! This man is a living legend, a force of nature, a true inspiration to millions around the globe. His incredible skills on the court, his unwavering determination, and his commitment to making the world a better place are just mind-blowing. I can't even put into words how much I love him. LeBron James isn't just a basketball player; he's a hero, a role model, a game-changer, and an all-around amazing human being. Every time he steps onto the court, I can't help but be overwhelmed with excitement and admiration. LeBron, you're simply the best, and I'm your biggest fan!</p>
             </div>
         </div>
     </div>
-    <script>
-        // Load the YouTube iFrame Player API asynchronously
-        var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    <div style="text-align: center;">
+        <h2>My Favorite Lebron Moments</h2>
+        <video width="640" height="360" controls>
+            <source src="images/lebron.mp4" type="video/mp4">
+        </video>
+    </div>
 
-        // Replace the VIDEO_ID with the ID of the YouTube video you want to play
-        var player;
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-                videoId: 'b117a8_jALE',
-                events: {
-                    'onReady': onPlayerReady,
-                    'onStateChange': onPlayerStateChange
-                }
-            });
-        }
-
-        function onPlayerReady(event) {
-            // Do something when the player is ready
-        }
-
-        function onPlayerStateChange(event) {
-            // Do something when the player state changes
-        }
-    </script>
 </body>
 </html>
